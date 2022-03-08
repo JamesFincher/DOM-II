@@ -19,4 +19,11 @@ document.body.addEventListener("click", (evt) => {
 	document.body.addEventListener("dblclick", (evt) => {
 		evt.target.innerHTML = "";
 	});
+
+	window.addEventListener("keydown", (evt) => {
+		if (evt.key == 6) {
+			evt.preventDefault();
+			document.body.innerHTML = "<h1>You ran order 66 </h1>";
+		}
+	});
 });

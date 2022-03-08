@@ -15,4 +15,8 @@ window.addEventListener("copy", () => {
 
 document.body.addEventListener("click", (evt) => {
 	evt.target.classList.toggle("mirror");
+
+	document.body.addEventListener("dblclick", (evt) => {
+		evt.target.innerHTML = "";
+	});
 });

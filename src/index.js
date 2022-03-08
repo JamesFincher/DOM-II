@@ -7,3 +7,12 @@ window.onload = function (e) {
 	const heading = document.querySelector("h1");
 	heading.style.backgroundColor = "yellow";
 };
+window.addEventListener("copy", () => {
+	navigator.clipboard.readText().then((text) => {
+		heading.textContent += text;
+	});
+});
+
+document.body.addEventListener("click", (evt) => {
+	evt.target.classList.toggle("mirror");
+});
